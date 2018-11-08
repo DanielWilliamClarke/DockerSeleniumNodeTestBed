@@ -4,6 +4,8 @@
   "description": "A test bed to run selenium automated tests written in node running with docker",
   "main": "index.js",
   "scripts": {
+    "up": "docker-compose up -d",
+    "down": "docker-compose down",
     "test": "node_modules/.bin/mocha spec/*.js --timeout 20000"
   },
   "repository": {
