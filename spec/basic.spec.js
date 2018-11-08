@@ -10,26 +10,17 @@ const BasicTest = async (driver) => {
 };
 
 describe("Basic Test", () => {
-    describe('Chrome Test', () => {
-        const driver = new Builder()
-            .forBrowser('chrome')
-            .usingServer("http://localhost:4444/wd/hub")
-            .build();
+    ["chrome", "firefox"].forEach(browser => {
+        describe(`${browser} Test`, async () => {
+            const driver = new Builder()
+                .forBrowser(browser)
+                .usingServer("http://localhost:4444/wd/hub")
+                .build();
 
-        it('should go to google and check the title', BasicTest.bind(this, driver));
+            it('should go to google and check the title', BasicTest.bind(this, driver));
 
-        after(async () => driver.quit());
-    });
-
-    describe('FireFox Test', () => {
-        const driver = new Builder()
-            .forBrowser('firefox')
-            .usingServer("http://localhost:4444/wd/hub")
-            .build();
-
-        it('should go to google and check the title', BasicTest.bind(this, driver));
-
-        after(async () => driver.quit());
+            after(async () => driver.quit());
+        });
     });
 });
 
