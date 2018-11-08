@@ -1,0 +1,27 @@
+{
+  "name": "docker-selenium-node",
+  "version": "1.0.0",
+  "description": "A test bed to run selenium automated tests written in node running with docker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielWilliamClarke/docker-selenium-node.git"
+  },
+  "keywords": [
+    "Selenium",
+    "Docker",
+    "NodeJS"
+  ],
+  "author": "DanielWilliamClarke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DanielWilliamClarke/docker-selenium-node/issues"
+  },
+  "homepage": "https://github.com/DanielWilliamClarke/docker-selenium-node#readme",
+  "dependencies": {
+    "npm": "^6.4.1"
+  }
+}
