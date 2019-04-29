@@ -12,6 +12,7 @@ describe("Basic Test", () => {
                 await driver.wait(until.titleIs('webdriver - Google Search'), 10000);
                 expect(await driver.getTitle()).to.equal('webdriver - Google Search');
 
+                await driver.sleep(5000);
                 await driver.quit();
             });
         });
