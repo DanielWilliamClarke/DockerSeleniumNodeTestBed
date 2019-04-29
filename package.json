@@ -6,7 +6,7 @@
   "scripts": {
     "up": "docker-compose up -d",
     "down": "docker-compose down",
-    "test": "node_modules/.bin/mocha spec/*.js --timeout 20000"
+    "test": "node_modules/.bin/mocha spec/*.js --no-timeouts"
   },
   "repository": {
     "type": "git",
