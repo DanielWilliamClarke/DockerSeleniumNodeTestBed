@@ -9,7 +9,7 @@ describe("Basic Test", () => {
 
                 await driver.get('https://www.google.com');
                 await driver.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN);
-                await driver.wait(until.titleIs('webdriver - Google Search'), 1000);
+                await driver.wait(until.titleIs('webdriver - Google Search'), 10000);
                 expect(await driver.getTitle()).to.equal('webdriver - Google Search');
 
                 await driver.quit();
