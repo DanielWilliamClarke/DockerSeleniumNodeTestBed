@@ -1,12 +1,14 @@
 version: "3"
 services:
+
   selenium-hub:
-    image: selenium/hub:3.141.5-astatine
+    image: selenium/hub:3.141.59-neon
     container_name: selenium-hub
     ports:
       - "4444:4444"
+
   chrome:
-    image: selenium/node-chrome:3.141.5-astatine
+    image: selenium/node-chrome-debug:3.141.59-neon
     depends_on:
       - selenium-hub
     environment:
@@ -14,8 +16,11 @@ services:
       - HUB_PORT=4444
     links:
       - selenium-hub
+    ports:
+      - "5900:5900"
+
   firefox:
-    image: selenium/node-firefox:3.141.5-astatine
+    image: selenium/node-firefox-debug:3.141.59-neon
     depends_on:
       - selenium-hub
     environment:
@@ -23,3 +28,5 @@ services:
       - HUB_PORT=4444
     links:
       - selenium-hub
+    ports:
+      - "5901:5900"

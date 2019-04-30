@@ -27,6 +27,7 @@
   "devDependencies": {
     "selenium-webdriver": "^4.0.0-alpha.1",
     "mocha": "^5.2.0",
-    "chai": "^4.1.2"
+    "chai": "^4.1.2",
+    "bluebird": "^3.5.4"
   }
 }
